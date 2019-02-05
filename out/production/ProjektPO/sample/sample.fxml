@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<!--suppress JavaFxEventHandler -->
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane prefHeight="800.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Media">
+               <content>
+                  <AnchorPane prefHeight="800.0" prefWidth="180.0">
+                     <children>
+                        <AnchorPane prefHeight="800.0" prefWidth="206.0">
+                           <children>
+                              <TreeView fx:id="produkcjeList" layoutX="3.0" layoutY="6.0" onContextMenuRequested="#wybranaProdukcja" onInputMethodTextChanged="#wybranaProdukcja" onMouseClicked="#wybranaProdukcja" prefHeight="749.0" prefWidth="200.0" showRoot="false" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="219.0" layoutY="21.0" prefHeight="731.0" prefWidth="562.0">
+                           <children>
+                              <GridPane layoutX="14.0" layoutY="412.0" prefHeight="221.0" prefWidth="543.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="309.0" minWidth="10.0" prefWidth="194.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="345.0" minWidth="10.0" prefWidth="326.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Tytuł" />
+                                    <Label fx:id="gatunekEtykieta" text="Gatunek" GridPane.rowIndex="6" />
+                                    <Label text="Czas Trwania" GridPane.rowIndex="2" />
+                                    <Label fx:id="tytul" text="Label" GridPane.columnIndex="1" />
+                                    <Label fx:id="gatunek" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label fx:id="czasTrwania" layoutX="126.0" layoutY="37.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label layoutX="10.0" layoutY="28.0" text="Kraj Produkcji" GridPane.rowIndex="1" />
+                                    <Label fx:id="krajProdukcji" layoutX="126.0" layoutY="28.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="ocenaEtykieta" layoutX="10.0" layoutY="120.0" text="Ocena" GridPane.rowIndex="5" />
+                                    <Label fx:id="ocena" layoutX="127.0" layoutY="120.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label layoutX="10.0" layoutY="153.0" text="Dystrybutor" GridPane.rowIndex="3" />
+                                    <Label fx:id="dystrybutor" layoutX="127.0" layoutY="153.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label fx:id="dataEtykieta" layoutX="10.0" layoutY="159.0" text="Data Produkcji" GridPane.rowIndex="4" />
+                                    <Label fx:id="dataProdukcji" layoutX="197.0" layoutY="159.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="sezonyEtykieta" layoutX="10.0" layoutY="145.0" text="Liczba Sezonow" GridPane.rowIndex="7" />
+                                    <Label fx:id="odcinkiEtykieta" layoutX="10.0" layoutY="168.0" text="Liczba Odcinkow" GridPane.rowIndex="8" />
+                                    <Label fx:id="liczbaSezonow" layoutX="149.0" layoutY="145.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label fx:id="liczbaOdcinkow" layoutX="149.0" layoutY="145.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <Label fx:id="cenaEtykieta" layoutX="10.0" layoutY="183.0" text="Cena" GridPane.rowIndex="9" />
+                                    <Label fx:id="cena" layoutX="144.0" layoutY="183.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <Label fx:id="promocjaEtykieta" layoutX="10.0" layoutY="186.0" text="Cena Promocyjna" GridPane.rowIndex="10" />
+                                    <Label fx:id="cenaPromocja" layoutX="144.0" layoutY="186.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <Label fx:id="premieraEtykieta" layoutX="10.0" layoutY="88.0" text="Data Premiery" GridPane.rowIndex="4" />
+                                 </children>
+                              </GridPane>
+                              <GridPane layoutX="24.0" layoutY="651.0" prefHeight="41.0" prefWidth="380.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="60.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="10.0" prefWidth="320.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Opis" />
+                                    <Label fx:id="opis" text="Label" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <ImageView fx:id="image" fitHeight="406.0" fitWidth="564.0" layoutX="-10.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="786.0" layoutY="14.0" prefHeight="739.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="filmyButton" layoutX="29.0" layoutY="10.0" mnemonicParsing="false" onAction="#dodajFilm" prefWidth="150.0" text="Dodaj Film" AnchorPane.rightAnchor="21.0" />
+                              <Button fx:id="serialeButton" layoutX="29.0" layoutY="50.0" mnemonicParsing="false" onAction="#dodajSerial" prefWidth="150.0" text="Dodaj Serial" />
+                              <Button fx:id="streamyButton" layoutX="29.0" layoutY="90.0" mnemonicParsing="false" onAction="#dodajStream" prefWidth="150.0" text="Dodaj Stream" />
+                              <ListView fx:id="listaAktorow" layoutX="10.0" layoutY="406.0" prefHeight="260.0" prefWidth="188.0" />
+                              <Button layoutX="29.0" layoutY="130.0" mnemonicParsing="false" onAction="#usunProdukcje" prefWidth="150.0" text="Usuń" />
+                              <Label layoutX="11.0" layoutY="377.0" prefHeight="18.0" prefWidth="178.0" text="Aktorzy">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content></Tab>
+          <Tab text="Aktorzy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="aktorzyPula" layoutX="14.0" layoutY="14.0" onContextMenuRequested="#wybranyAktor" onMouseClicked="#wybranyAktor" prefHeight="745.0" prefWidth="200.0" />
+                           </children></AnchorPane>
+                        <GridPane layoutX="336.0" layoutY="594.0" prefHeight="120.0" prefWidth="540.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="imieAktora" text="Label" GridPane.columnIndex="1" />
+                              <Label text="Imię" />
+                              <Label text="Nazwisko" GridPane.rowIndex="1" />
+                              <Label text="Data Urodzenia" GridPane.rowIndex="2" />
+                              <Label text="Kraj Pochodzenia" GridPane.rowIndex="3" />
+                              <Label fx:id="nazwiskoAktora" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="dataAktora" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="krajAktora" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <ImageView fx:id="zdjecieAktora" fitHeight="546.0" fitWidth="556.0" layoutX="247.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+                         <Button fx:id="aktorzyButton" layoutX="829.0" layoutY="52.0" mnemonicParsing="false" onAction="#dodajAktora" prefWidth="150.0" text="Dodaj Aktora" AnchorPane.rightAnchor="21.0" />
+                        <Button fx:id="uAktorzyButton" layoutX="829.0" layoutY="92.0" mnemonicParsing="false" onAction="#usunAktora" prefWidth="150.0" text="Usuń Aktora" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Dystrybutorzy">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TreeView fx:id="dystrybutorzyLista" layoutX="14.0" layoutY="14.0" onContextMenuRequested="#wybranyDystrybutor" onMouseClicked="#wybranyDystrybutor" prefHeight="742.0" prefWidth="230.0" showRoot="false" />
+                        <ImageView fx:id="dystrybutorImage" fitHeight="574.0" fitWidth="722.0" layoutX="259.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+                        <GridPane layoutX="366.0" layoutY="638.0" prefHeight="90.0" prefWidth="509.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Nazwa Dystrybutora" />
+                              <Label fx:id="nazwaDystrybutora" text="Label" GridPane.columnIndex="1" />
+                              <Label text="Rodzaj Umowy" GridPane.rowIndex="1" />
+                              <Label fx:id="rodzajUmowy" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label text="Data Wygaśnięcia Umowy" GridPane.rowIndex="2" />
+                              <Label fx:id="dataWygasniecia" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Użytkownicy">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="807.0" layoutY="15.0" prefHeight="943.0" prefWidth="179.0">
+                           <children>
+                              <Button fx:id="dodajUzytkownika" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#dodajUzytkownika" prefWidth="150.0" text="Dodaj Użytkownika" />
+                              <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#usunUzytkownika" prefWidth="150.0" text="Usuń Użytkownika" />
+                           </children>
+                        </AnchorPane>
+                        <ListView fx:id="uzytkownicyList" layoutX="14.0" layoutY="15.0" onContextMenuRequested="#wybranyUzytkownik" onMouseClicked="#wybranyUzytkownik" prefHeight="745.0" prefWidth="200.0" />
+                        <GridPane layoutX="315.0" layoutY="558.0" prefHeight="164.0" prefWidth="488.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="162.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="326.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="login" text="Label" GridPane.columnIndex="1" />
+                              <Label text="Login" />
+                              <Label text="Email" GridPane.rowIndex="1" />
+                              <Label text="Numer Karty" GridPane.rowIndex="2" />
+                              <Label fx:id="email" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="nrKarty" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label text="Rodzaj Abonamentu" GridPane.rowIndex="3" />
+                              <Label fx:id="abonament" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Data Urodzenia" GridPane.rowIndex="4" />
+                              <Label fx:id="dataUrodzenia" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <ImageView fx:id="miniaturka" fitHeight="532.0" fitWidth="579.0" layoutX="225.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
